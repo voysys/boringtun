@@ -7,11 +7,4 @@
 
 pub mod crypto;
 
-#[cfg(not(any(target_os = "windows", target_os = "android", target_os = "ios")))]
-pub mod device;
-
-pub mod ffi;
 pub mod noise;
-
-#[cfg(target_os = "android")]
-pub mod jni;
